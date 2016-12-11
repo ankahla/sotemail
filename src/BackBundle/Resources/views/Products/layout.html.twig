@@ -1,0 +1,42 @@
+{% extends 'BackBundle::layout.html.twig' %}
+{% block title %}
+{{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('bundles/back/css/separate/pages/files.min.css') }}">
+{% endblock %}
+
+{% block body %}
+<section class="box-typical files-manager">
+				<nav class="files-manager-side">
+					<header class="files-manager-side-title">Produits</header>
+					<ul class="files-manager-side-list">
+						<li><a href="#" class="active">Gammes</a></li>
+						<li><a href="#">Séries</a></li>
+						<li><a href="#">Modèles</a></li>
+					</ul>
+				</nav><!--.files-manager-side-->
+
+				<div class="files-manager-panel">
+					<div class="files-manager-panel-in">
+						<header class="files-manager-header">
+						{% block header %}{% endblock %}
+						</header><!--.files-manager-header-->
+
+						<div class="files-manager-content">
+						{% block content %}{% endblock %}
+						</div><!--.files-manager-content-->
+
+						{% block sidecontent %}{% endblock %}
+					</div><!--.files-manager-panel-in-->
+				</div><!--.files-manager-panels-->
+			</section><!--.files-manager-->
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+{% endblock %}

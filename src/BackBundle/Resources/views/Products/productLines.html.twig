@@ -1,0 +1,59 @@
+{% extends 'BackBundle:Products:layout.html.twig' %}
+
+{% block header %}
+<div class="files-manager-header-left">
+	<h2>Gammes</h2>
+</div>
+<div class="files-manager-header-right">
+	<div class="views">
+		<button type="button" class="btn btn-rounded"><i class="glyphicon glyphicon-plus-sign"></i>&nbsp;Nouveau</button>
+	</div>
+	<div class="search">
+		<button type="submit" class="btn-icon"><i class="font-icon font-icon-search"></i></button>
+		<input type="text" class="form-control form-control-rounded" placeholder="Search"/>
+	</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="files-manager-content-in scrollable-block">
+	<div class="fm-file-grid">
+		<div class="fm-file selected">
+			<div class="fm-file-icon">
+				<img src="{{ asset('bundles/back/img/folder.png') }}" alt="">
+			</div>
+			<div class="fm-file-name">Gamme design</div>
+			<div class="fm-file-size">7 Séries</div>
+		</div>
+		<div class="fm-file">
+			<div class="fm-file-icon">
+				<img src="{{ asset('bundles/back/img/folder.png') }}" alt="">
+			</div>
+			<div class="fm-file-name">Gamme Inspiration</div>
+			<div class="fm-file-size">144 Séries</div>
+		</div>
+		<div class="fm-file">
+			<div class="fm-file-icon">
+				<img src="{{ asset('bundles/back/img/folder.png') }}" alt="">
+			</div>
+			<div class="fm-file-name">Gamme 2014</div>
+			<div class="fm-file-size">x Séries</div>
+		</div>
+	</div>
+</div><!--.files-manager-content-in-->
+{% endblock %}
+
+{% block sidecontent %}
+<section class="files-manager-aside">
+	<div class="files-manager-aside-section">
+		<div class="box-typical-header-sm">Gamme design</div>
+		<div class="info-list">
+			<p>Date création: 08/01/2016 12:45</p>
+			<p>Contenu: 9 Séries</p>
+			<p>Nombre de vue: 83</p>
+		</div>
+		<a href="#" class="btn btn-rounded"><i class="font-icon-left font-icon-pencil"></i>&nbsp;Modifier</a>
+	</div>
+	<div class="files-manager-aside-section"></div>
+</section><!--.files-manager-aside-->
+{% endblock %}
