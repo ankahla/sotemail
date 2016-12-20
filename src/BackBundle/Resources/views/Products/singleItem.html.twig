@@ -1,0 +1,17 @@
+<div class="fm-file" href="{{ item.browseLink }}">
+	<div class="fm-file-icon">
+		<img src="{{ asset('bundles/back/img/folder.png') }}" alt="">
+	</div>
+	<div class="fm-file-name">{{ item.name }}</div>
+	<div class="fm-file-size">{{ item.childCount }}</div>
+	<div class="hidden">
+		<div class="box-typical-header-sm">{{ item.name }}</div>
+		<div class="info-list">
+			<p>Date création: {{ item.createdAt }}</p>
+			<p>Contenu: {{ item.childCount }}</p>
+			<p>Nombre de vue: {{ item.views }}</p>
+		</div>
+		<a href="{{ item.link }}" class="btn btn-rounded"><i class="font-icon-left font-icon-pencil"></i>&nbsp;Modifier</a>
+		<a href="#"><i class="font-icon-left font-icon-trash"></i>&nbsp;Supprimer</a>
+	</div>
+</div>
