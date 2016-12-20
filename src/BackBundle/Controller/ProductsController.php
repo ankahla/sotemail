@@ -5,7 +5,7 @@ namespace BackBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-class productsController extends Controller
+class ProductsController extends Controller
 {
 
     /**
@@ -33,6 +33,14 @@ class productsController extends Controller
     }
 
     /**
+     * @Route("/productLines/new", name="productLinesNew")
+     */
+    public function productLinesNewAction()
+    {
+        return $this->render('BackBundle:Products:productLinesNew.html.twig');
+    }
+
+    /**
      * @Route("/productSeries", name="productSeries")
      */
     public function productSeriesAction()
@@ -54,6 +62,14 @@ class productsController extends Controller
     public function productSeriesEditAction($id)
     {
         return $this->render('BackBundle:Products:productSeriesEdit.html.twig');
+    }
+
+    /**
+     * @Route("/productSeries/new", name="productSeriesNew")
+     */
+    public function productSeriesNewAction()
+    {
+        return $this->render('BackBundle:Products:productSeriesNew.html.twig');
     }
 
 	/**
@@ -78,5 +94,13 @@ class productsController extends Controller
     public function productEditAction($id)
     {
         return $this->render('BackBundle:Products:productEdit.html.twig');
+    }
+
+    /**
+     * @Route("/product/new", name="productNew")
+     */
+    public function productNewAction()
+    {
+        return $this->render('BackBundle:Products:productNew.html.twig');
     }
 }
