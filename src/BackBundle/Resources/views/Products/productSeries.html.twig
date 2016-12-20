@@ -2,11 +2,11 @@
 
 {% block header %}
 <div class="files-manager-header-left">
-	<h2>Gammes</h2>
+	<h2>Séries de la gamme Inspiration</h2>
 </div>
 <div class="files-manager-header-right">
 	<div class="views">
-		<a href="{{ path('productLinesNew') }}" class="btn btn-rounded"><i class="glyphicon glyphicon-plus-sign"></i>&nbsp;Nouveau</a>
+		<button type="button" class="btn btn-rounded"><i class="glyphicon glyphicon-plus-sign"></i>&nbsp;Nouveau</button>
 	</div>
 	<div class="search">
 		<button type="submit" class="btn-icon"><i class="font-icon font-icon-search"></i></button>
@@ -19,9 +19,9 @@
 <div class="files-manager-content-in scrollable-block">
 	<div class="fm-file-grid">
 	{% set items = [
-	{name : 'Gamme design', childCount : '7 Séries', createdAt : '09/05/2016 10:45', views : 25, link : '#', browseLink : path('productSeries')},
-	{name : 'Gamme Inspiration', childCount : '14 Séries', createdAt : '09/10/2016 12:45', views : 38, link : '#', browseLink : path('productSeries')},
-	{name : 'Gamme 2014', childCount : 'x Séries', createdAt : '08/01/2014 12:45', views : 49, link : '#', browseLink : path('productSeries')},
+	{name : 'Serie 22', childCount : '22 Produits', createdAt : '09/05/2016 10:45', views : 35, link : '#', browseLink : path('products')},
+	{name : 'Serie 25', childCount : '44 Produits', createdAt : '09/10/2016 12:45', views : 48, link : '#', browseLink : path('products')},
+	{name : 'Serie 33', childCount : '34 Produits', createdAt : '08/01/2014 12:45', views : 59, link : '#', browseLink : path('products')},
 	] %}
 	{% for item in items %}
 	{{ include('BackBundle:Products:singleItem.html.twig') }}
