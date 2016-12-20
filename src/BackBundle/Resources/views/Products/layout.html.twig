@@ -13,9 +13,9 @@
 				<nav class="files-manager-side">
 					<header class="files-manager-side-title">Produits</header>
 					<ul class="files-manager-side-list">
-						<li><a href="#" class="active">Gammes</a></li>
-						<li><a href="#">Séries</a></li>
-						<li><a href="#">Modèles</a></li>
+						<li><a href="{{ path('productLines') }}" {% if app.request.attributes.get('_route') == 'productLines' %}class="active"{% endif %}>Gammes</a></li>
+						<li><a href="{{ path('productSeries') }}" {% if app.request.attributes.get('_route') == 'productSeries' %}class="active"{% endif %}>Séries</a></li>
+						<li><a href="{{ path('products') }}" {% if app.request.attributes.get('_route') == 'products' %}class="active"{% endif %}>Modèles</a></li>
 					</ul>
 				</nav><!--.files-manager-side-->
 

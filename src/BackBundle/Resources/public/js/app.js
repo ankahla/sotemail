@@ -421,6 +421,16 @@ $(document).ready(function(){
 		fileManagerHeight();
 	});
 
+	$('.files-manager-content .fm-file').click(function(){
+		$('.files-manager-content .fm-file').removeClass('selected');
+		var details = $(this).addClass('selected').find('.hidden').html()
+		$('.files-manager-aside-section:first').html(details);
+	});
+
+	$('.files-manager-content .fm-file').dblclick(function(){
+		document.location.href = $(this).attr('href');
+	});
+
 /* ==========================================================================
 	Mail
 	========================================================================== */
