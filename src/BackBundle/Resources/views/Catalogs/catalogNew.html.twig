@@ -1,0 +1,123 @@
+{% extends 'BackBundle::layout.html.twig' %}
+{% block title %}
+    {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/back/css/lib/summernote/summernote.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/back/css/separate/pages/editor.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/back/css/separate/vendor/select2.min.css') }}') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/back/css/separate/pages/project.min.css') }}">
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/back/css/separate/pages/files.min.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <section class="box-typical proj-page">
+            <section class="proj-page-section proj-page-header">
+                <div class="title">
+                    Catalogue
+                    <i class="font-icon font-icon-pencil"></i>
+                </div>
+                <div class="project">
+                    <div class="checkbox-toggle">
+                        <input type="checkbox" id="check-toggle-2" checked="">
+                        <label for="check-toggle-2">Publié</label>
+                    </div>
+                </div>
+            </section><!--.proj-page-section-->
+
+            <section class="proj-page-section">
+
+                <fieldset class="form-group">
+                    <label class="form-label semibold" for="exampleInput">Nom</label>
+                    <input type="text" class="form-control" id="exampleInput" placeholder="Nom">
+                    <small class="text-muted">Le nom de votre catalogue.</small>
+                </fieldset>
+
+
+            </section><!--.proj-page-section-->
+
+            <section class="proj-page-section">
+                <header class="proj-page-subtitle">
+                    <h3>Description</h3>
+                </header>
+                <div class="summernote-theme-1">
+                    <div class="summernote">This lorem ipsum generator is made for all the webdesigners, designers, webmasters and others who need lorem ipsum. Generator is made the way that everyone can use it, but especially for projects which need html markup. You can decide which html tags you want and our generator will generate just as you specified.
+                        Pretty cool, isn't it?</div>
+                </div>
+            </section><!--.proj-page-section-->
+            <section class="proj-page-section">
+                <header class="proj-page-subtitle">
+                    <h3>Catalogue
+								<span class="dropdown dropdown-typical dropup attach">
+										<a class="dropdown-toggle dropdown-toggle-txt"
+                                           id="dd-chat-attach"
+                                           data-target="#"
+                                           data-toggle="dropdown"
+                                           aria-haspopup="true"
+                                           aria-expanded="false">
+                                        </a>
+										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-chat-attach">
+                                            <a class="dropdown-item" href="#"><i class="font-icon font-icon-cam-photo"></i>Photo</a>
+                                            <a class="dropdown-item" href="#"><i class="font-icon font-icon-cam-video"></i>Video</a>
+                                            <a class="dropdown-item" href="#"><i class="font-icon font-icon-sound"></i>Audio</a>
+                                            <a class="dropdown-item" href="#"><i class="font-icon font-icon-page"></i>Document</a>
+                                        </div>
+									</span>
+                    </h3>
+                </header>
+                <div class="proj-page-attach">
+                    <i class="font-icon font-icon-pdf"></i>
+                    <p class="name">Concept and UX.pdf</p>
+                    <p class="date">16:48, 02 dec 2016</p>
+                    <p>
+                        <a href="#">View</a>
+                        <a href="#">Download</a>
+                    </p>
+                </div>
+            </section><!--.proj-page-attach-section-->
+
+
+            <section class="proj-page-section">
+
+
+                <h5 class="m-t-lg">&nbsp;</h5>
+                <div class="drop-zone">
+                    <!--
+                    при перетаскиваении добавляем класс .dragover
+                    <div class="drop-zone dragover">
+                    -->
+                    <i class="font-icon font-icon-cloud-upload-2"></i>
+                    <div class="drop-zone-caption">Drag file to upload</div>
+								<span class="btn btn-rounded btn-file">
+									<span>Choisir un fichier</span>
+									<input type="file" name="files[]" multiple>
+								</span>
+                </div>
+            </section><!--.proj-page-section-->
+            <section class="proj-page-section">
+                <div class="leave-comment-block">
+
+                    <div class="chat-area-bottom">
+                        <button type="submit" class="btn btn-rounded float-left">Enregistrer</button>
+                        <button type="reset" class="btn btn-rounded btn-default float-left">Annuler</button>
+                    </div><!--.chat-area-bottom-->
+                </div><!--.leave-comment-block-->
+            </section>
+        </section><!--.proj-page-attach-section-->
+        </section><!--.proj-page-->
+    </div><!--.row-->
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/back/js/lib/select2/select2.full.min.js') }}"></script>
+    <script src="{{ asset('bundles/back/js/lib/summernote/summernote.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('.summernote').summernote();
+        });
+    </script>
+{% endblock %}
